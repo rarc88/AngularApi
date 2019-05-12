@@ -1,0 +1,30 @@
+<div class="example-container">
+  <mat-toolbar>{{title}}</mat-toolbar>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="user.email" placeholder="Email" type="email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="user.password" placeholder="Password" type="password">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="password" placeholder="Re-password" type="password">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select [(ngModel)]="user.sex" placeholder="Sex">
+      <mat-option value="1">Female</mat-option>
+      <mat-option value="2">Masculine</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="user.direction" placeholder="Direction"></textarea>
+  </mat-form-field>
+
+  <div class="example-button-row">
+    <button mat-raised-button (click)="create()" color="primary">Save</button>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary" class="example-toolbar">
     <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-    <h1 class="example-app-name">Aprendiendo Angular</h1>
+    <h1 class="example-app-name">Learning Angular</h1>
   </mat-toolbar>
 
   <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
@@ -15,26 +15,28 @@
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <a mat-list-item routerLink="user/create">Create</a>
-              <a mat-list-item routerLink="user/read">Read</a>
-              <a mat-list-item routerLink="user/update">Update</a>
-              <a mat-list-item routerLink="user/delete">Delete</a>
+              <a mat-list-item routerLink="user/list">List</a>
+              <a mat-list-item routerLink="user/find">Find</a>
             </mat-expansion-panel>
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
                   <mat-panel-title>
-                    LOGIN
+                    AUTH
                   </mat-panel-title>
                 </mat-expansion-panel-header>
                 <a mat-list-item routerLink="user/signin">SignIn</a>
                 <a mat-list-item routerLink="user/signout">SignOut</a>
                 <a mat-list-item routerLink="user/forgotPassword">Forgot Password</a>
+                <a mat-list-item routerLink="user/protectedRoute">Protected Route</a>
               </mat-expansion-panel>
           </mat-accordion>
       </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <router-outlet></router-outlet>
+      <div style="margin: 4vh">
+        <router-outlet></router-outlet>
+      </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

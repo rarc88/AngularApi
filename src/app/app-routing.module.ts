@@ -12,7 +12,15 @@ const routes: Routes = [
     children: [
       {
         path: 'create',
-        loadChildren: './components/user-create/user-create.module#UserCreateModule'
+        loadChildren: './components/user-form/user-form.module#UserFormModule'
+      },
+      {
+        path: 'list',
+        loadChildren: './components/user-list/user-list.module#UserListModule'
+      },
+      {
+        path: 'signin',
+        loadChildren: './components/user-signin/user-signin.module#UserSigninModule'
       }
     ]
   },
